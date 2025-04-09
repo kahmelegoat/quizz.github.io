@@ -1,0 +1,181 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #000000);
+    color: #ecf0f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    line-height: 1.6;
+  }
+  
+  .container {
+    background: rgba(30, 39, 46, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 35px 25px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #f9ca24;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  #flag-img {
+    width: 85%;
+    max-width: 320px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  #flag-img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .option-btn {
+    display: block;
+    background: linear-gradient(90deg, #0984e3, #00cec9);
+    color: white;
+    padding: 14px 22px;
+    margin: 12px auto;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 340px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+  }
+  .option-btn:hover {
+    background: linear-gradient(90deg, #74b9ff, #81ecec);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styles pour la boîte de résultats */
+#result-box {
+    background: rgba(30, 39, 46, 0.95); /* Fond semi-transparent */
+    padding: 20px 15px; /* Espacement interne */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Ombre */
+    animation: fadeIn 0.5s ease; /* Animation d'apparition */
+    margin-top: 20px; /* Marge en haut */
+}
+
+/* Styles pour la boîte de résultats */
+#result-box {
+    background: rgba(30, 39, 46, 0.95); /* Fond semi-transparent */
+    padding: 25px 20px; /* Espacement interne accru */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Ombre plus prononcée */
+    animation: fadeIn 0.5s ease; /* Animation d'apparition */
+    margin-top: 30px; /* Marge en haut */
+    transition: transform 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+#result-box:hover {
+    transform: scale(1.02); /* Légère augmentation au survol */
+}
+
+/* Styles pour le titre des résultats */
+#result-box h2 {
+    color: #00cec9; /* Couleur du texte */
+    margin-bottom: 20px; /* Marge en bas */
+    font-size: 26px; /* Taille de la police augmentée */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Ombre du texte plus marquée */
+}
+
+/* Styles pour le tableau des résultats */
+table {
+    width: 100%; /* Largeur complète */
+    border-collapse: collapse; /* Fusionner les bordures */
+    margin-top: 15px; /* Marge en haut */
+}
+
+th, td {
+    padding: 15px; /* Espacement interne accru */
+    text-align: center; /* Alignement centré */
+    border-bottom: 1px solid #636e72; /* Bordure en bas */
+    color: #dfe6e9; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police augmentée */
+}
+
+/* Styles pour le bouton de redémarrage */
+#restart {
+    margin-top: 25px; /* Marge en haut */
+    background: linear-gradient(to right, #00b894, #55efc4); /* Dégradé de fond */
+    padding: 14px 28px; /* Espacement interne accru */
+    border: none; /* Pas de bordure */
+    color: white; /* Couleur du texte */
+    font-size: 18px; /* Taille de la police augmentée */
+    font-weight: 600; /* Poids de la police */
+    border-radius: 15px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: all 0.3s ease; /* Transition pour les effets */
+}
+
+#restart:hover {
+    background: linear-gradient(to right, #55efc4, #81ecec); /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement au survol */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Ombre au survol */
+}
+  
+.hidden {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  #difficulty-select {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .diff-btn {
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .diff-btn:hover {
+    background-color: #a29bfe;
+    transform: scale(1.05);
+  }
+  
+  
+  
+  

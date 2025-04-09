@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Drapeaux</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🌍 Quiz sur les Drapeaux</h1>
+
+    <!-- Zone de chargement -->
+    <div id="loading" class="hidden">
+      <p>Chargement des drapeaux...</p>
+    </div>
+
+    <div id="quiz">
+      <div id="question-box">
+        <img id="flag-img" src="" alt="Drapeau" />
+        <p id="question-text">Quel est ce drapeau ?</p>
+
+        <!-- Timer (optionnel) -->
+        <div id="timer" class="hidden">Temps : <span id="time">10</span>s</div>
+
+        <div id="options"></div>
+
+        <!-- Message de feedback -->
+        <div id="feedback" class="hidden"></div>
+      </div>
+
+      <div id="result-box" class="hidden">
+        <h2>Résultats</h2>
+        <table>
+          <tr><th>Total de questions</th><td id="total"></td></tr>
+          <tr><th>Réponses correctes</th><td id="score"></td></tr>
+        </table>
+        <button id="restart">Rejouer</button>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
